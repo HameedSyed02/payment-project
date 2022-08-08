@@ -1,16 +1,17 @@
-import React, { Component } from 'react'
+import React from 'react'
 import {Navbar, Nav} from 'react-bootstrap';
+import {Link} from 'react-router-dom'
 function Navigationbar() {
         return (
             
-                <Navbar bg="dark" variant="dark">
-                {/* <Navbar.Brand href="#home">Navbar</Navbar.Brand> */}
-                <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-          </Nav>
-                </Navbar>
+        <Navbar bg="dark" >
+        {/* <Navbar.Brand href="#home">Navbar</Navbar.Brand> */}
+        <Nav className="me-auto">
+            <Link to="/"><button>Home</button></Link> 
+            <Link to="/transaction"><button>Add Transaction</button></Link>
+            <Link to="/listtransaction"><button>Transaction list</button></Link>
+        </Nav>
+        </Navbar>
             
         )
     
