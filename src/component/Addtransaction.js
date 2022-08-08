@@ -84,7 +84,7 @@ export default class Addtransaction extends Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <h1>User Registration</h1>
+                    <h1>Transaction</h1>
                     <label>Receiver Account Holder Name:</label> <input type="text" value={this.state.receiverAccountHolderName} onChange={this.rnamehandler} placeholder="Receiver Account Holder Name..." /><br />
                     <label>Receiver Account Holder Number :</label> <input type="text" value={this.state.receiverAccountHolderNumber} onChange={this.rnumberhandler} placeholder="Receiver Account Holder Number..." /><br />
                     <label>Amount :</label> <input type="text" value={this.state.amount} onChange={this.amounthandler} placeholder="Amount..." /><br />
