@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import Navigationbar from './Navigationbar'
 export default class Addtransaction extends Component {
   constructor(props) {
     super(props)
@@ -82,6 +82,7 @@ handleSubmit = (event) => {
   render() {
     return (
       <div>
+        <Navigationbar/>
         <form onSubmit={this.handleSubmit}>
                     <h1>Transaction</h1>
                     <label>Sender   BIC :</label> <input type="text" value={this.state.senderBIC} onChange={this.senderBIChandler} placeholder="Sender BIC..." /><br />
@@ -110,13 +111,13 @@ handleSubmit = (event) => {
                         <option value="banktransfer">Bank Transfer</option>
                         <option value="banktransferforown">Bank Transfer for Own</option>
                     </select><br />
-                     <label>Currency Code :</label><select onChange={this.currencyCodehandler} defaultValue="Select Currency Code">
+                     {/* <label>Currency Code :</label><select onChange={this.currencyCodehandler} defaultValue="Select Currency Code">
                         <option defaultValue>Select Currency Code</option>
                         <option value="usd">USD</option>
                         <option value="eur">EUR</option>
                         <option value="gbp">GBP</option>
                         <option value="jpy">JPY</option>
-                    </select><br />
+                    </select><br /> */}
                     <input  type="submit" value="Submit" />
                 </form>
       </div>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Card, Table } from "react-bootstrap"
 import { Link } from "react-router-dom";
+import Navigationbar from "./Navigationbar";
 
 function Listtransaction() {
   const [Transaction, setTransaction] = useState([]);
@@ -38,8 +39,10 @@ function Listtransaction() {
   }
 
   return (
+    <div>
+      <Navigationbar/>
       <Card className={"border border-dark bg-dark text-white"}>
-        <Card.Header> Transaction list</Card.Header>
+        <Card.Header><h5> Transaction list</h5></Card.Header>
         <Card.Body>
           <Table bordered hover striped variant="dark">
             <thead>
@@ -65,6 +68,7 @@ function Listtransaction() {
             </Table>
           </Card.Body>
         </Card>
+        </div>
       );
 }
 
