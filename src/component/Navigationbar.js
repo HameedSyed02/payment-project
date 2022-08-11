@@ -10,6 +10,9 @@ function Navigationbar() {
             <Link to="/dashboard"><button>Dashboard</button></Link> 
             <Link to="/transaction"><button>Add Transaction</button></Link>
             <Link to="/listtransaction"><button>Transaction list</button></Link>
+            <div >
+            <Link to="/" ><button  >Logout</button></Link>
+            </div>
         </Nav>
         </Navbar>
             

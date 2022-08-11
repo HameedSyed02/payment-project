@@ -8,6 +8,7 @@ import Showtransaction from './component/Showtransaction';
 import {Routes,Link, Route} from 'react-router-dom'
 import Dashboard from './component/Dashboard';
 import Login from './component/Login';
+import demo from './component/demo';
 
 
 function App() {

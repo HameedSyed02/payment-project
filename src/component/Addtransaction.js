@@ -2,15 +2,16 @@ import React, { Component , useEffect} from 'react'
 import Navigationbar from './Navigationbar'
 import axios from 'axios';
 
+const current = new Date();
 export default class Addtransaction extends Component {
-
+  
   constructor(props) {
     super(props)
     this.state = {
       receiveraccountholdernumber: "",
       receiveraccountholdername: "",
       amount: "",
-      transferdate: "2022-08-10T11:35:14.396Z",
+      transferdate: "2022-08-11T10:45:51.712Z",
         message: {
         messagecode: "",
         },

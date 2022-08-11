@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import Dashboard from "./Dashboard";
 
 import "./loginstyles.css";
@@ -7,7 +7,7 @@ import "./loginstyles.css";
 function Login() {
   const [errorMessages, setErrorMessages] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
-
+const navigate = useNavigate();
   const database = [
     {
       username: "admin",
@@ -49,36 +49,23 @@ function Login() {
     );
 
   const renderForm = (
-    <div className="form">
-      <form onSubmit={handlesubmit}>
-        <div className="input-container">
-          <label>Username </label>
-          <input type="text" name="uname" required />
-          {renderErrorMessage("uname")}
-        </div>
-        <div className="input-container">
-          <label>Password </label>
-          <input type="password" name="pass" required />
-          {renderErrorMessage("pass")}
-        </div>
-        <div className="button-container">
-          <input type="submit" />
-        </div>
+    <div class="login-page">
+    <div class="form">
+      <form class="login-form" onSubmit={handlesubmit}>
+        <input type="text" name="uname" placeholder="username"/>
+        <input type="password" name="pass" placeholder="password"/>
+        <button>login</button>
+        <p class="message">Not registered? <a href="#">Create an account</a></p>
       </form>
     </div>
-  );
-
-  const redirect = (
-    <Routes>
-      <Route exact path="/dashboard" component={<Dashboard/>}></Route>
-    </Routes>
+  </div>
   );
 
   return (
     // isSubmitted ? <Dashboard/> : renderForm
     <div className="app">
       <div className="login-form">
-        <div>{isSubmitted ? <Dashboard/> : renderForm}</div>
+        <div>{isSubmitted ? navigate("/dashboard") : renderForm}</div>
       </div>
     </div>
   );
